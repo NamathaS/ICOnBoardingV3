@@ -1,0 +1,154 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Customer Details</h2>
+
+
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/knockout-3.4.2.js"></script>
+<script src="~/Scripts/knockout-3.4.2.debug.js"></script>
+
+
+
+<div class="container" style="margin-top:3%">
+    <a href="#" class="btn btn-info" data-bind="click: $root.AddCustomer">Add New Customer</a> <br /><br />
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Address</th>
+                <th>Action(Edit)</th>
+                <th>Action(Delete)</th>
+            </tr>
+        </thead>
+        <tbody id="tBody" data-bind="foreach:AllCustomers">
+            <tr>
+                <td data-bind="text:DataModel.Name"></td>
+                <td data-bind="text:DataModel.Address"></td>
+                <td>
+                    <button id="edit" class="btn btn-warning" data-bind="click : $parent.Edit"><span class='glyphicon glyphicon-edit'></span> Edit</button>
+                </td>
+                <td>
+                    <button id="delete" class="btn btn-danger" data-bind="click : $parent.Delete"><span class='glyphicon glyphicon-trash'></span> Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content" data-bind="with : SelectedCustomer" style="width:640px">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Customer Details</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <input id="id" type="hidden" value="0" data-bind="value:DataModel.Id" />
+                        <label>Name</label>
+                        <input type="text" data-bind="value:DataModel.Name" name="Name" id="Name" class="form-control" />
+                        <label>Address</label>
+                        <input type="text" data-bind="value:DataModel.Address" name="Address" id="Address" class="form-control" />
+                        <br />
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button id="SaveCustomer" type="submit" class="btn btn-default" data-bind="click : $parent.SaveCustomer">Save</button>
+                    <button type="button" class="btn btn-default " data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+        function CustomerModel(data) {
+            var self = this;
+            self.Id = data ? ko.observable(data.Id) : 0;
+            self.Name = data ? ko.observable(data.Name) : ko.observable();
+            self.Address = data ? ko.observable(data.Address) : ko.observable();
+        }
+        function CustomerViewmodel(data) {
+            var self = this;
+            self.DataModel = new CustomerModel(data);
+        }
+        function viewModel() {
+            self = this;
+            self.AllCustomers = ko.observableArray();
+            self.SelectedCustomer = ko.observable();
+
+            self.AddCustomer = function () {
+                deleteFlag = 0;
+                self.SelectedCustomer(new CustomerViewmodel());
+                $('#myModal').modal('show');
+            }
+            self.Edit = function (data) {
+                deleteFlag = 0;
+                debugger;
+                self.SelectedCustomer(data);
+                $('#myModal').modal('show');
+            }
+            self.Delete = function (data) {
+                self.SelectedCustomer(data);
+                $('#myModal').modal('show');
+                $('#Name').prop('disabled', true);
+                $('#Address').prop('disabled', true);
+                $('#SaveCustomer').html('Delete');
+                deleteFlag = 1;
+            }
+            self.SaveCustomer = function (data) {
+                debugger;
+                var Id = data.DataModel.Id;
+                var Name = data.DataModel.Name;
+                var Address = data.DataModel.Address;
+
+                $.ajax({
+
+                    url: '/Customers/SaveToDatabase?deleteFlag=' + deleteFlag,
+                    data: { Id: Id, Name: Name, Address: Address},
+                    type: "POST",
+                    cache: false,
+                    success: function (savingStatus) {
+                        location.reload();
+                        if (savingStatus.success == false)
+                        { alert("Please fill the empty fields"); }
+                    },
+                    error: function () {
+                        alert("error")
+                    }
+                });
+            }
+            loadCustomers();
+            function loadCustomers() {
+                $.ajax({
+                    type: "GET",
+                    url: '/Customers/LoadAllCustomers',
+                    dataType: 'json',
+
+                    success: function (data) {
+                        data.forEach(function (customer) {
+                            self.AllCustomers.push(new CustomerViewmodel(customer));
+                        });
+                    },
+                    error: function (req, status, err) {
+                        console.log('something went wrong', status, err);
+                    }
+                });
+            }
+        }
+        $(document).ready(function () {
+            var deleteFlag = 0;
+            ko.applyBindings(new viewModel());
+        });
+</script>
+
+
+
+
+

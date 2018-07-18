@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICOnBoardingV3Knockout", "ICOnBoardingV3Knockout\ICOnBoardingV3Knockout.csproj", "{7B0F042C-252B-492A-87FD-1DB7D9A1BCF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICOnBoardingV3DB", "ICOnBoardingV3DB\ICOnBoardingV3DB.csproj", "{B6B57D6E-FEB3-448E-AEDC-06BCA252AA36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B0F042C-252B-492A-87FD-1DB7D9A1BCF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B0F042C-252B-492A-87FD-1DB7D9A1BCF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B0F042C-252B-492A-87FD-1DB7D9A1BCF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B0F042C-252B-492A-87FD-1DB7D9A1BCF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6B57D6E-FEB3-448E-AEDC-06BCA252AA36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6B57D6E-FEB3-448E-AEDC-06BCA252AA36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6B57D6E-FEB3-448E-AEDC-06BCA252AA36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6B57D6E-FEB3-448E-AEDC-06BCA252AA36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7ED67B5F-0FBF-481F-823E-9F21C3F2EE5E}
+	EndGlobalSection
+EndGlobal

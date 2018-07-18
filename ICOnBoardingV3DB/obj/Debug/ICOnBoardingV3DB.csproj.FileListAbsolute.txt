@@ -1,0 +1,22 @@
+C:\Users\namat\Documents\Industry Connect\Projects\IC Projects\ICOnBoardingV3Knockout\ICOnBoardingV3DB\bin\Debug\ICOnBoardingV3DB.dll.config
+C:\Users\namat\Documents\Industry Connect\Projects\IC Projects\ICOnBoardingV3Knockout\ICOnBoardingV3DB\bin\Debug\ICOnBoardingV3DB.dll
+C:\Users\namat\Documents\Industry Connect\Projects\IC Projects\ICOnBoardingV3Knockout\ICOnBoardingV3DB\bin\Debug\ICOnBoardingV3DB.pdb
+C:\Users\namat\Documents\Industry Connect\Projects\IC Projects\ICOnBoardingV3Knockout\ICOnBoardingV3DB\bin\Debug\EntityFramework.dll
+C:\Users\namat\Documents\Industry Connect\Projects\IC Projects\ICOnBoardingV3Knockout\ICOnBoardingV3DB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\namat\Documents\Industry Connect\Projects\IC Projects\ICOnBoardingV3Knockout\ICOnBoardingV3DB\bin\Debug\EntityFramework.xml
+C:\Users\namat\Documents\Industry Connect\Projects\IC Projects\ICOnBoardingV3Knockout\ICOnBoardingV3DB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\namat\Documents\Industry Connect\Projects\IC Projects\ICOnBoardingV3Knockout\ICOnBoardingV3DB\obj\Debug\ICOnBoardingV3DB.csprojResolveAssemblyReference.cache
+C:\Users\namat\Documents\Industry Connect\Projects\IC Projects\ICOnBoardingV3Knockout\ICOnBoardingV3DB\obj\Debug\ICOnBoardingV3DB.csproj.CoreCompileInputs.cache
+C:\Users\namat\Documents\Industry Connect\Projects\IC Projects\ICOnBoardingV3Knockout\ICOnBoardingV3DB\obj\Debug\ICOnBoardingV3DB.dll
+C:\Users\namat\Documents\Industry Connect\Projects\IC Projects\ICOnBoardingV3Knockout\ICOnBoardingV3DB\obj\Debug\ICOnBoardingV3DB.pdb
+C:\Users\namat\Documents\Industry Connect\RemoteIntern\ICOnBoardingV3Knockout\ICOnBoardingV3DB\bin\Debug\ICOnBoardingV3DB.dll.config
+C:\Users\namat\Documents\Industry Connect\RemoteIntern\ICOnBoardingV3Knockout\ICOnBoardingV3DB\bin\Debug\ICOnBoardingV3DB.dll
+C:\Users\namat\Documents\Industry Connect\RemoteIntern\ICOnBoardingV3Knockout\ICOnBoardingV3DB\bin\Debug\ICOnBoardingV3DB.pdb
+C:\Users\namat\Documents\Industry Connect\RemoteIntern\ICOnBoardingV3Knockout\ICOnBoardingV3DB\bin\Debug\EntityFramework.dll
+C:\Users\namat\Documents\Industry Connect\RemoteIntern\ICOnBoardingV3Knockout\ICOnBoardingV3DB\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\namat\Documents\Industry Connect\RemoteIntern\ICOnBoardingV3Knockout\ICOnBoardingV3DB\bin\Debug\EntityFramework.xml
+C:\Users\namat\Documents\Industry Connect\RemoteIntern\ICOnBoardingV3Knockout\ICOnBoardingV3DB\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\namat\Documents\Industry Connect\RemoteIntern\ICOnBoardingV3Knockout\ICOnBoardingV3DB\obj\Debug\ICOnBoardingV3DB.csprojResolveAssemblyReference.cache
+C:\Users\namat\Documents\Industry Connect\RemoteIntern\ICOnBoardingV3Knockout\ICOnBoardingV3DB\obj\Debug\ICOnBoardingV3DB.csproj.CoreCompileInputs.cache
+C:\Users\namat\Documents\Industry Connect\RemoteIntern\ICOnBoardingV3Knockout\ICOnBoardingV3DB\obj\Debug\ICOnBoardingV3DB.dll
+C:\Users\namat\Documents\Industry Connect\RemoteIntern\ICOnBoardingV3Knockout\ICOnBoardingV3DB\obj\Debug\ICOnBoardingV3DB.pdb
